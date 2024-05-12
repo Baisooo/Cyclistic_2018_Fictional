@@ -1,0 +1,7 @@
+﻿Quarter,TotalTrips,"Average 
+Duration(s)",Maximum Duration(s),Minimum Duration(s),"Total 
+trips",Busiest start station,Station trips,Busiest route,Busy Route trips
+Q1,"22,443",6233.51,14336400,61,22443,Streeter Dr & Grand Ave,1540,Lake Shore Dr & Monroe St - Streeter Dr & Grand Ave,372
+Q2,"2,14,282",3854.55,13453200,61,214282,Streeter Dr & Grand Ave,15710,Lake Shore Dr & Monroe St - Streeter Dr & Grand Ave,2619
+Q3,"2,73,617",3762.12,11635000,61,273617,Streeter Dr & Grand Ave,21136,Streeter Dr & Grand Ave - Streeter Dr & Grand Ave,3665
+Q4,"62,236",3181.31,6900970,61,62236,Canal St & Adams St,3487,Lake Shore Dr & Monroe St - Streeter Dr & Grand Ave,638

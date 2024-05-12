@@ -1,0 +1,6 @@
+﻿Quarter,TotalTrips,"Average 
+Duration(s)",Maximum Duration(s),Minimum Duration(s),Busiest start station,Station trips,Busiest route,Busy Route trips
+Q1,364702,716.2002512,13557600,61,Canal St & Adams St,8380,Clinton St & Washington Blvd - Michigan Ave & Washington St,488
+Q2,834293,835.5523659,5606030,61,Canal St & Adams St,16774,Canal St & Adams St - Michigan Ave & Washington St,1161
+Q3,774958,970.1577002,11469100,61,Canal St & Adams St,15872,Michigan Ave & Washington St - Canal St & Adams St,1187
+Q4,580450,811.8962064,4844800,61,Canal St & Adams St,11262,Michigan Ave & Washington St - Canal St & Adams St,867
