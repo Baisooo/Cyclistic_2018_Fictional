@@ -1,1 +1,1 @@
-# Cyclistic_2018_Fictional
+As part of Google data analytics professional certificate, this project aims to drill down into a fictional bike sharing company data to analyse differences between their annual subscribers and one-time or full day pass customers.
