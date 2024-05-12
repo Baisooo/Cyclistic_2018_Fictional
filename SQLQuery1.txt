@@ -1,0 +1,96 @@
+SELECT Count(trip_id) AS AVG_Q1 FROM Cleaned_Q1  WHERE usertype = 'Subscriber';
+SELECT Count(trip_id) AS AVG_Q1_2 FROM Cleaned_Q1  WHERE usertype != 'Subscriber';
+SELECT Count(trip_id) AS AVG_Q2 FROM Cleaned_Q2  WHERE usertype = 'Subscriber';
+SELECT Count(trip_id) AS AVG_Q2_2 FROM Cleaned_Q2  WHERE usertype != 'Subscriber';
+SELECT Count(trip_id) AS AVG_Q3 FROM Cleaned_Q3  WHERE usertype = 'Subscriber';
+SELECT Count(trip_id) AS AVG_Q3_2 FROM Cleaned_Q3  WHERE usertype != 'Subscriber';
+SELECT Count(trip_id) AS AVG_Q4 FROM Cleaned_Q4  WHERE usertype = 'Subscriber';
+SELECT Count(trip_id) AS AVG_Q4_2 FROM Cleaned_Q4  WHERE usertype != 'Subscriber';
+SELECT tripduration, usertype FROM Cleaned_Q1;
+SELECT Sum(tripduration), usertype FROM Cleaned_Q4 where usertype = 'Customer'
+Group by usertype;
+
+SELECT avg(tripduration) AS AVG_Q1 FROM Cleaned_Q1  WHERE usertype = 'Subscriber';
+SELECT avg(tripduration) AS AVG_Q1 FROM Cleaned_Q1  WHERE usertype = 'Customer';
+SELECT avg(tripduration) AS AVG_Q1, Max(tripduration) AS MAX_Q1, Min(tripduration) AS MIN_Q1, Count(trip_id) AS NO_of_trips FROM Cleaned_Q1  WHERE usertype = 'Customer';
+SELECT avg(tripduration) AS AVG_Q2, Max(tripduration) AS MAX_Q2, Min(tripduration) AS MIN_Q2, Count(trip_id) AS NO_of_trips FROM Cleaned_Q2  WHERE usertype = 'Customer';
+SELECT avg(tripduration) AS AVG_Q3, Max(tripduration) AS MAX_Q3, Min(tripduration) AS MIN_Q3, Count(trip_id) AS NO_of_trips FROM Cleaned_Q3  WHERE usertype = 'Customer';
+SELECT avg(tripduration) AS AVG_Q4, Max(tripduration) AS MAX_Q4, Min(tripduration) AS MIN_Q4, Count(trip_id) AS NO_of_trips FROM Cleaned_Q4  WHERE usertype = 'Customer';
+SELECT Count(trip_id) AS AVG_Q1 FROM Cleaned_Q1  WHERE usertype = 'Subscriber';
+SELECT Count(trip_id) AS AVG_Q1_2 FROM Cleaned_Q1  WHERE usertype != 'Subscriber';
+
+SELECT to_station_name  FROM Cleaned_Q1  WHERE usertype != 'Subscriber'
+Group By to_station_name;
+
+USE Cyclistic_2018;
+GO
+SELECT DISTINCT(from_station_name),COUNT(trip_id) as No_of_rides from Cleaned_Q1 WHERE usertype = 'Customer'
+Group by from_station_name 
+order by No_of_rides DESC;
+SELECT DISTINCT(from_station_name),COUNT(trip_id) as No_of_rides from Cleaned_Q2 WHERE usertype = 'Customer'
+Group by from_station_name 
+order by No_of_rides DESC;
+SELECT DISTINCT(from_station_name),COUNT(trip_id) as No_of_rides from Cleaned_Q3 WHERE usertype = 'Customer'
+Group by from_station_name
+order by No_of_rides DESC;
+SELECT DISTINCT(from_station_name),COUNT(trip_id) as No_of_rides from Cleaned_Q4 WHERE usertype = 'Customer'
+Group by from_station_name
+order by No_of_rides DESC;
+
+SELECT from_station_name, to_station_name, Count(trip_id) As No_of_trips, Avg(tripduration) AS Average_Duration FROM Cleaned_Q1 where usertype = 'Customer'
+Group by from_station_name, to_station_name
+Order by No_of_trips DESC;
+SELECT from_station_name, to_station_name, Count(trip_id) As No_of_trips, Avg(tripduration) AS Average_Duration FROM Cleaned_Q2 where usertype = 'Customer'
+Group by from_station_name, to_station_name
+Order by No_of_trips DESC;
+SELECT from_station_name, to_station_name, Count(trip_id) As No_of_trips, Avg(tripduration) AS Average_Duration FROM Cleaned_Q3 where usertype = 'Customer'
+Group by from_station_name, to_station_name
+Order by No_of_trips DESC;
+SELECT from_station_name, to_station_name, Count(trip_id) As No_of_trips, Avg(tripduration) AS Average_Duration FROM Cleaned_Q4 where usertype = 'Customer'
+Group by from_station_name, to_station_name
+Order by No_of_trips DESC;
+
+
+SELECT count(trip_id) AS TotalTrips_Q1 FROM Cleaned_Q1 WHERE usertype = 'Customer';
+SELECT count(trip_id) AS TotalTrips_Q2 FROM Cleaned_Q2 WHERE usertype = 'Customer';
+SELECT count(trip_id) AS TotalTrips_Q3 FROM Cleaned_Q3 WHERE usertype = 'Customer';
+SELECT count(trip_id) AS TotalTrips_Q4 FROM Cleaned_Q4 WHERE usertype = 'Customer';
+
+SELECT day_of_week, Count(trip_id) AS No_of_trips FROM Cleaned_Q4 WHERE usertype = 'Subscriber'
+Group by day_of_week;
+
+SELECT count(trip_id) AS TotalTrips_Q1 FROM Cleaned_Q1 WHERE usertype = 'Subscriber';
+SELECT count(trip_id) AS TotalTrips_Q2 FROM Cleaned_Q2 WHERE usertype = 'Subscriber';
+SELECT count(trip_id) AS TotalTrips_Q3 FROM Cleaned_Q3 WHERE usertype = 'Subscriber';
+SELECT count(trip_id) AS TotalTrips_Q4 FROM Cleaned_Q4 WHERE usertype = 'Subscriber';
+
+SELECT avg(tripduration) AS AVG_Q1, Max(tripduration) AS MAX_Q1, Min(tripduration) AS MIN_Q1, Count(trip_id) AS NO_of_trips FROM Cleaned_Q1  WHERE usertype = 'Subscriber';
+SELECT avg(tripduration) AS AVG_Q2, Max(tripduration) AS MAX_Q2, Min(tripduration) AS MIN_Q2, Count(trip_id) AS NO_of_trips FROM Cleaned_Q2  WHERE usertype = 'Subscriber';
+SELECT avg(tripduration) AS AVG_Q3, Max(tripduration) AS MAX_Q3, Min(tripduration) AS MIN_Q3, Count(trip_id) AS NO_of_trips FROM Cleaned_Q3  WHERE usertype = 'Subscriber';
+SELECT avg(tripduration) AS AVG_Q4, Max(tripduration) AS MAX_Q4, Min(tripduration) AS MIN_Q4, Count(trip_id) AS NO_of_trips FROM Cleaned_Q4  WHERE usertype = 'Subscriber';
+
+SELECT DISTINCT(from_station_name),COUNT(trip_id) as No_of_rides from Cleaned_Q1 WHERE usertype = 'Subscriber'
+Group by from_station_name
+order by No_of_rides DESC;
+SELECT DISTINCT(from_station_name),COUNT(trip_id) as No_of_rides from Cleaned_Q2 WHERE usertype = 'Subscriber'
+Group by from_station_name
+order by No_of_rides DESC;
+SELECT DISTINCT(from_station_name),COUNT(trip_id) as No_of_rides from Cleaned_Q3 WHERE usertype = 'Subscriber'
+Group by from_station_name
+order by No_of_rides DESC;
+SELECT DISTINCT(from_station_name),COUNT(trip_id) as No_of_rides from Cleaned_Q4 WHERE usertype = 'Subscriber'
+Group by from_station_name
+order by No_of_rides DESC;
+
+SELECT from_station_name, to_station_name, Count(trip_id) As No_of_trips, Avg(tripduration) AS Average_Duration FROM Cleaned_Q1 where usertype = 'Subscriber'
+Group by from_station_name, to_station_name
+Order by No_of_trips DESC;
+SELECT from_station_name, to_station_name, Count(trip_id) As No_of_trips, Avg(tripduration) AS Average_Duration FROM Cleaned_Q2 where usertype = 'Subscriber'
+Group by from_station_name, to_station_name
+Order by No_of_trips DESC;
+SELECT from_station_name, to_station_name, Count(trip_id) As No_of_trips, Avg(tripduration) AS Average_Duration FROM Cleaned_Q3 where usertype = 'Subscriber'
+Group by from_station_name, to_station_name
+Order by No_of_trips DESC;
+SELECT from_station_name, to_station_name, Count(trip_id) As No_of_trips, Avg(tripduration) AS Average_Duration FROM Cleaned_Q4 where usertype = 'Subscriber'
+Group by from_station_name, to_station_name
+Order by No_of_trips DESC;
